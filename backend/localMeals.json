@@ -1,0 +1,12 @@
+[
+  { "name": "Ugali & Sukuma Wiki", "price": 80 },
+  { "name": "Chapati & Beans", "price": 90 },
+  { "name": "Githeri", "price": 70 },
+  { "name": "Rice & Beans", "price": 100 },
+  { "name": "Mandazi & Tea", "price": 50 },
+  { "name": "Chips & Sausage", "price": 120 },
+  { "name": "Pilau", "price": 150 },
+  { "name": "Mokimo", "price": 130 },
+  { "name": "Matoke & Beef", "price": 180 },
+  { "name": "Chapati & Ndengu", "price": 100 }
+]
