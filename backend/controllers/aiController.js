@@ -25,22 +25,6 @@ Format the response as JSON with this structure:
   {"meal": "Ugali & Sukuma Wiki", "price": 50, "joke in sheng": "Hii nayo utapenda"},
   {"meal": "Chapati & Beans", "price": 60, "joke in sheng": "ItaSlap kushinda manzi yako"},
   ...
-]
-  some of the local food around most of the universities include:
-   meal: Sukuma Wiki + mayai, price = 35
-   meal: mayai, price = 15
-   meal: Githeri, price = 30
-   meal: Chapati and Beans(chafua), price = 50/65
-   meal: Rice and Stew
-   meal: Mandazi, price = 10
-   meal: Chipo, price = 50
-   meal: Ndengu, price = 30
-   meal: Chapati, price = 10/20
-   meal: Half Pizza, price = 230
-   meal: Pilau, price = 80
-   meal: Nyama choma, price = 160
-   meal: Ugali kuku, Price = 200
-   meal: Indomie, price = 40
     `;
 
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
