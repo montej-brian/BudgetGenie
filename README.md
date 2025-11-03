@@ -28,5 +28,5 @@ Built with **React, Vite, Node.js, and Google Gemini AI**.
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/BudgetGenie.git
+git clone https://github.com/montej-brian/BudgetGenie.git
 cd BudgetGenie
