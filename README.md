@@ -30,3 +30,12 @@ Built with **React, Vite, Node.js, and Google Gemini AI**.
 ```bash
 git clone https://github.com/montej-brian/BudgetGenie.git
 cd BudgetGenie
+
+2. **Backend setup**
+cd backend
+npm install
+
+create .env
+PORT=5000
+GEMINI_API_KEY=your_valid_gemini_api_key_here
+
