@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./pages/Home";
 import Header from "./components/Header";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
