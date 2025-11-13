@@ -12,7 +12,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/ai/budget", {
+      const res = await fetch("https://backend-budgetgenie-b8tl.onrender.com/api/ai/budget", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ budget }),
