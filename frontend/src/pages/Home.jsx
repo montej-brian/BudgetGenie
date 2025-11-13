@@ -12,7 +12,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://budgetgenie-1.onrender.com/api/ai/budget", {
+      const res = await fetch("http://localhost:5000/api/ai/budget", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ budget }),
@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-red-900 via-black to-gray-900 text-white p-6">
+    <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-red-900 via-black to-gray-900 text-white p-6 relative">
       <h1 className="text-4xl font-bold mb-6 text-red-400"> BudgetGenie</h1>
       <div className="bg-gray-800 p-6 rounded-2xl shadow-lg w-full max-w-md">
         <label className="block mb-2 text-gray-300">Enter Your Budget (KES)</label>
@@ -48,7 +48,7 @@ export default function Home() {
         </button>
       </div>
 
-      {loading && <p className="mt-6 text-gray-300 animate-pulse">Generating options...</p>}
+      {loading && <p className="mt-6 text-gray-300 animate-pulse">Chill Kiasi Bossi...</p>}
       {error && <p className="mt-6 text-red-400">{error}</p>}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 w-full max-w-3xl">
@@ -62,10 +62,16 @@ export default function Home() {
             <p className="mt-2 text-gray-300 font-medium"> KES {meal.price}</p>
           </div>
         ))}
-        <footer className="mt-8 text-gray-500 text-sm text-center">
-            Built by <span className="font-bold text-orange-600">MONTEJ</span> 
-        </footer>
       </div>
+
+      {/* Footer */}
+      <footer
+        className={`text-gray-500 text-sm text-center ${
+          meals.length > 0 ? "absolute bottom-6 w-full" : "mt-8 flex-grow flex items-end justify-center"
+        }`}
+      >
+        Built by <span className="font-bold text-orange-600">MONTEJ</span>
+      </footer>
     </div>
   );
 }
