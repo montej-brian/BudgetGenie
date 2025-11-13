@@ -42,9 +42,10 @@ export default function Home() {
         />
         <button
           onClick={handleGenerate}
-          className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded-lg transition"
+          disabled={loading}
+          className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded-lg transition disabled:bg-red-800 disabled:cursor-not-allowed"
         >
-          Generate Meal Options
+          {loading ? "Generating..." : "Generate Meal Options"}
         </button>
       </div>
 
