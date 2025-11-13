@@ -1,0 +1,93 @@
+/* /home/montej/Desktop/PROJECTS/BudgetGenie/frontend/src/styles/SplashScreen.css */
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #111827; /* A dark gray, similar to your app's theme */
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.splash-content {
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.splash-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  animation: moveIn 1.5s ease-in-out;
+}
+
+.splash-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f87171; /* A shade of red to match your theme */
+  margin-bottom: 0.5rem;
+  animation: slideInLeft 1.5s ease-in-out;
+}
+
+.splash-subtitle {
+  font-family: monospace;
+  font-size: 1.25rem;
+  color: #d1d5db;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(255, 0, 0); /* The typewriter cursor */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation:
+    typing 1s steps(16, end),
+    blink-caret 0.75s step-end infinite,
+    wipeOut 2s steps(16,end) 4s forwards;
+}
+
+.splash-footer {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The wipe out effect */
+@keyframes wipeOut {
+  from { width: 100% }
+  to { width: 0 }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Move In animation for the logo */
+@keyframes moveIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Slide In animation for the title */
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
