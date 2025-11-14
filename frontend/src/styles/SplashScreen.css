@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #111827; /* A dark gray, similar to your app's theme */
-  color: white;
+  background-color: #111827; 
+  color: rgb(0, 8, 255);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -28,7 +28,7 @@
 .splash-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #f87171; /* A shade of red to match your theme */
+  color: #f87171; 
   margin-bottom: 0.5rem;
   animation: slideInLeft 1.5s ease-in-out;
 }
@@ -38,7 +38,7 @@
   font-size: 1.25rem;
   color: #d1d5db;
   overflow: hidden;
-  border-right: 0.15em solid rgb(255, 0, 0); /* The typewriter cursor */
+  border-right: 0.15em solid rgb(255, 0, 0); 
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.15em;
@@ -56,37 +56,37 @@
   animation: fadeIn 1.5s ease-in-out;
 }
 
-/* The typing effect */
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
-/* The wipe out effect */
+
 @keyframes wipeOut {
   from { width: 100% }
   to { width: 0 }
 }
 
-/* The typewriter cursor effect */
+
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
 
-/* Fade in animation */
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* Move In animation for the logo */
+
 @keyframes moveIn {
   from { transform: translateY(-50px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Slide In animation for the title */
+
 @keyframes slideInLeft {
   from { transform: translateX(-50px); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }

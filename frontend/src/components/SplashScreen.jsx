@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/logo.png"; // Make sure you have a logo file at this path
-import "../styles/SplashScreen.css"; // Import the new CSS file
+import logo from "../assets/logo.png";
+import "../styles/SplashScreen.css"; 
 
 const SplashScreen = () => {
   return (
