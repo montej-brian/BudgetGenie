@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 export default function Home() {
   const [budget, setBudget] = useState("");
+  const [mealType, setMealType] = useState("Breakfast");
+  const [dietPreference, setDietPreference] = useState("Balanced Diet");
   const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -15,7 +17,7 @@ export default function Home() {
       const res = await fetch("https://backend-budgetgenie-b8tl.onrender.com/api/ai/budget", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ budget }),
+        body: JSON.stringify({ budget, mealType, dietPreference }),
       });
 
       if (!res.ok) throw new Error("Server Error");
@@ -40,6 +42,30 @@ export default function Home() {
           value={budget}
           onChange={(e) => setBudget(e.target.value)}
         />
+
+        <label className="block mb-2 text-gray-300">Meal Type</label>
+        <select
+          className="w-full p-3 rounded bg-gray-900 border border-gray-700 text-white mb-4"
+          value={mealType}
+          onChange={(e) => setMealType(e.target.value)}
+        >
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Dinner">Dinner</option>
+          <option value="Snack">Snack</option>
+        </select>
+
+        <label className="block mb-2 text-gray-300">Diet Preference</label>
+        <select
+          className="w-full p-3 rounded bg-gray-900 border border-gray-700 text-white mb-4"
+          value={dietPreference}
+          onChange={(e) => setDietPreference(e.target.value)}
+        >
+          <option value="Balanced Diet">Balanced Diet</option>
+          <option value="Simple">Simple</option>
+          <option value="Heavy">Heavy</option>
+          <option value="Light">Light</option>
+        </select>
         <button
           onClick={handleGenerate}
           disabled={loading}
@@ -67,9 +93,8 @@ export default function Home() {
 
       {/* Footer */}
       <footer
-        className={`text-gray-500 text-sm text-center ${
-          meals.length > 0 ? "absolute bottom-6 w-full" : "mt-8 flex-grow flex items-end justify-center"
-        }`}
+        className={`text-gray-500 text-sm text-center ${meals.length > 0 ? "absolute bottom-6 w-full" : "mt-8 flex-grow flex items-end justify-center"
+          }`}
       >
         Built by <span className="font-bold text-orange-600">MONTEJ</span>
       </footer>

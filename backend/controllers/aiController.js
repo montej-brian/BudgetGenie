@@ -15,7 +15,7 @@ router.post("/budget", async (req, res) => {
   try {
     const generateMealOptions = async (attempt) => {
       try {
-        const { budget } = req.body;
+        const { budget, mealType, dietPreference } = req.body;
 
         if (!budget) {
           // This check is inside but let's keep it as a safeguard.
@@ -23,7 +23,9 @@ router.post("/budget", async (req, res) => {
         }
         const prompt = `
 You are a meal recommendation assistant for university students in Kenya.
-Given a budget of KES ${budget}, list 5-7 affordable meal options or combinations available near campus. For higher budgets, prioritize suggesting meal combinations.
+The user wants to have **${mealType}** and prefers a **${dietPreference}**.
+Given a budget of KES ${budget}, list 5-7 affordable meal options or combinations available near campus that match these criteria.
+For higher budgets, prioritize suggesting meal combinations.
 Include meal name, estimated price, and short joke of the meal in sheng.
 Format the response as JSON with this structure:
 [
