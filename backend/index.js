@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5001;
 
 // Define allowed origins
 const allowedOrigins = [
-  'https://budget-genie.vercel.app/', // TODO: Replace with your actual Vercel URL
+  'https://budget-genie.vercel.app', // TODO: Replace with your actual Vercel URL
   'http://localhost:5173'
 ];
 
